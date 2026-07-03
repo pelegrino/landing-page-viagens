@@ -3,7 +3,8 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Destino Certo | Pedido de Orçamento</title>
+        <title>Destino Certo - Pedido de Orçamento</title>
+
         <link rel="stylesheet" href="css/style.css" />
     </head>
 
@@ -11,30 +12,60 @@
         <header>
             <h1>Destino Certo</h1>
 
-            <p>Planeje sua próxima viagem com quem entende do assunto.</p>
+            <p>Sua próxima aventura começa aqui.</p>
 
             <button id="btnOrcamento">Solicitar orçamento</button>
         </header>
 
         <main>
             <section id="hero">
-                <h2>Seu próximo destino começa aqui</h2>
+                <h2>Planeje a viagem dos seus sonhos</h2>
 
                 <p>
-                    Preencha o formulário e receba um orçamento personalizado
-                    para sua viagem dos sonhos.
+                    Conte para onde deseja viajar e descubra informações do
+                    destino antes de solicitar seu orçamento.
                 </p>
             </section>
 
             <section id="sobre">
-                <h2>Por que escolher a Destino Certo?</h2>
+                <h2>Quem somos</h2>
 
                 <p>
-                    Trabalhamos com roteiros personalizados para destinos
-                    nacionais e internacionais, oferecendo as melhores opções de
-                    hospedagem, transporte e passeios conforme o perfil de cada
-                    viajante.
+                    A Destino Certo oferece roteiros personalizados para viagens
+                    nacionais e internacionais, buscando sempre as melhores
+                    opções de hospedagem, transporte e passeios para nossos
+                    clientes.
                 </p>
+            </section>
+
+            <section id="destinos">
+                <h2>Destinos em destaque</h2>
+
+                <div class="cards">
+                    <article>
+                        <h3>🇧🇷 Gramado</h3>
+
+                        <p>Clima agradável, gastronomia e belas paisagens.</p>
+                    </article>
+
+                    <article>
+                        <h3>🇧🇷 Maceió</h3>
+
+                        <p>Praias paradisíacas e águas cristalinas.</p>
+                    </article>
+
+                    <article>
+                        <h3>🇫🇷 Paris</h3>
+
+                        <p>História, cultura e romantismo.</p>
+                    </article>
+
+                    <article>
+                        <h3>🇯🇵 Tóquio</h3>
+
+                        <p>Tecnologia, tradição e gastronomia.</p>
+                    </article>
+                </div>
             </section>
 
             <section id="orcamento">
@@ -42,69 +73,85 @@
 
                 <form id="formOrcamento">
                     <label for="nome">Nome</label>
-                    <input type="text" id="nome" name="nome" required />
+
+                    <input type="text" id="nome" required />
 
                     <label for="email">E-mail</label>
-                    <input type="email" id="email" name="email" required />
 
-                    <label for="destino">Destino desejado</label>
-                    <input
-                        type="text"
-                        id="destino"
-                        name="destino"
-                        placeholder="Ex.: Gramado, Paris, Maceió"
-                        required
-                    />
+                    <input type="email" id="email" required />
+
+                    <label for="telefone">Telefone</label>
+
+                    <input type="tel" id="telefone" required />
+
+                    <label for="tipoViagem">Tipo da viagem</label>
+
+                    <select id="tipoViagem" required>
+                        <option value="">Selecione</option>
+
+                        <option value="nacional">Nacional</option>
+
+                        <option value="internacional">Internacional</option>
+                    </select>
+
+                    <label for="destino">Destino</label>
+
+                    <select id="destino" required>
+                        <option value="">Selecione o tipo da viagem</option>
+                    </select>
 
                     <label for="ida">Data de ida</label>
-                    <input type="date" id="ida" name="ida" required />
+
+                    <input type="date" id="ida" required />
 
                     <label for="volta">Data de volta</label>
-                    <input type="date" id="volta" name="volta" required />
 
-                    <label for="viajantes">Quantidade de viajantes</label>
+                    <input type="date" id="volta" required />
+
+                    <label for="viajantes"> Quantidade de viajantes </label>
+
                     <input
                         type="number"
                         id="viajantes"
-                        name="viajantes"
                         min="1"
+                        value="1"
                         required
                     />
 
-                    <label for="cep">CEP</label>
-                    <input
-                        type="text"
-                        id="cep"
-                        name="cep"
-                        placeholder="00000-000"
-                    />
-
-                    <label for="cidade">Cidade</label>
-                    <input type="text" id="cidade" name="cidade" readonly />
-
-                    <label for="estado">Estado</label>
-                    <input type="text" id="estado" name="estado" readonly />
-
-                    <label for="mensagem">Mensagem</label>
+                    <label for="mensagem"> Observações </label>
 
                     <textarea
                         id="mensagem"
-                        name="mensagem"
                         rows="5"
                         placeholder="Conte um pouco mais sobre sua viagem."
                     ></textarea>
 
-                    <button type="submit">Enviar solicitação</button>
+                    <button type="button" id="btnConsultar">
+                        Consultar destino
+                    </button>
                 </form>
+            </section>
+
+            <section id="informacoes">
+                <h2>Informações do destino</h2>
+
+                <div id="cardDestino">
+                    <p>
+                        Selecione um destino e clique em
+                        <strong>Consultar destino</strong>.
+                    </p>
+                </div>
             </section>
         </main>
 
         <footer>
-            <p>Destino Certo</p>
+            <h3>Destino Certo</h3>
 
             <p>contato@destinocerto.com</p>
 
-            <p>&copy; 2026 - Todos os direitos reservados.</p>
+            <p>(14) 99999-9999</p>
+
+            <p>© 2026 - Todos os direitos reservados.</p>
         </footer>
 
         <script src="js/script.js"></script>
