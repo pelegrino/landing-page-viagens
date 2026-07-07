@@ -84,7 +84,7 @@
 
                     <input type="tel" id="telefone" required />
 
-                    <label for="tipoViagem">Tipo da viagem</label>
+                    <label for="tipoViagem"> Tipo da viagem </label>
 
                     <select id="tipoViagem" required>
                         <option value="">Selecione</option>
@@ -94,17 +94,17 @@
                         <option value="internacional">Internacional</option>
                     </select>
 
-                    <label for="destino">Destino</label>
+                    <label for="destino"> Destino </label>
 
                     <select id="destino" required>
                         <option value="">Selecione o tipo da viagem</option>
                     </select>
 
-                    <label for="ida">Data de ida</label>
+                    <label for="ida"> Data de ida </label>
 
                     <input type="date" id="ida" required />
 
-                    <label for="volta">Data de volta</label>
+                    <label for="volta"> Data de volta </label>
 
                     <input type="date" id="volta" required />
 
@@ -118,29 +118,27 @@
                         required
                     />
 
-                    <label for="mensagem"> Observações </label>
+                    <label for="mensagem"> Observações da viagem </label>
 
                     <textarea
                         id="mensagem"
                         rows="5"
-                        placeholder="Conte um pouco mais sobre sua viagem."
+                        placeholder="Conte um pouco mais sobre a viagem desejada."
                     ></textarea>
 
                     <button type="button" id="btnConsultar">
                         Consultar destino
                     </button>
+
+                    <div id="cardDestino">
+                        <p>
+                            Selecione um destino e clique em
+                            <strong>Consultar destino</strong>.
+                        </p>
+                    </div>
+
+                    <button type="submit">Enviar orçamento</button>
                 </form>
-            </section>
-
-            <section id="informacoes">
-                <h2>Informações do destino</h2>
-
-                <div id="cardDestino">
-                    <p>
-                        Selecione um destino e clique em
-                        <strong>Consultar destino</strong>.
-                    </p>
-                </div>
             </section>
         </main>
 
